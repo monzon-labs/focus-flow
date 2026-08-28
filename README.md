@@ -1,13 +1,10 @@
-# focus-flow
+# FocusFlow
+
 Plataforma web full-stack moderna y segura para la gestión de clases y usuarios en centros de entrenamiento.
-
-# FocusFlow — Proyecto Mejorado
-
-He reestructurado completamente el proyecto aplicando las mejores prácticas en **arquitectura, seguridad, testing y operaciones**. Aquí está la versión mejorada:
 
 ---
 
-## 🏗️ Estructura Final (Mejorada)
+## 🏗️ Estructura Final
 
 ```
 focusflow/
@@ -170,7 +167,7 @@ focusflow/
 
 ---
 
-## 1. `compose.yaml` — Orquestación Mejorada
+## 1. `compose.yaml`
 
 ```yaml
 services:
@@ -2125,16 +2122,3 @@ def downgrade() -> None:
 ```
 
 ---
-
-## Resumen de Mejoras Aplicadas
-
-| Categoría | Mejoras Implementadas |
-|-----------|----------------------|
-| **Seguridad** | Argon2id, JWT con expiración corta + refresh rotation, rate limiting Redis, headers de seguridad, network isolation, non-root containers, read-only FS, secrets validation fail-fast |
-| **Arquitectura** | Capa de servicios separada, DI limpia, factory pattern para app, async end-to-end, structured logging con request IDs |
-| **Testing** | pytest-asyncio con fixtures compartidas, factories de datos, cobertura >80% enforced, e2e con Playwright, unit tests de seguridad |
-| **DevOps** | Multi-stage Dockerfiles, healthchecks integrados, scripts operativos, pre-commit ready, linting/formatting/type-checking configurados |
-| **Documentación** | ADRs, política de seguridad, guía de setup, diagramas de arquitectura |
-| **Frontend** | Middleware de protección de rutas, interceptores de token con auto-refresh, Zustand con persistencia parcial, TypeScript strict |
-
-¿Quieres que profundice en algún módulo específico, añada CI/CD pipeline (GitHub Actions), o implemente alguna funcionalidad adicional?
