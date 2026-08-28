@@ -1,0 +1,159 @@
+# ==============================================================================
+# FocusFlow — .gitignore
+# Full-Stack FastAPI (Python) + Next.js (TypeScript) + Docker + PostgreSQL
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment Variables & Secrets (Seguridad Crítica)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.local.example
+*.pem
+*.key
+*.cert
+*.crt
+secrets.yaml
+
+# ------------------------------------------------------------------------------
+# 2. Local Docker Overrides, Backups & Volúmenes
+# ------------------------------------------------------------------------------
+# Descomentar si compose.override.yaml contiene configuraciones/puertos locales no compartidos
+# compose.override.yaml
+backups/
+*.sql.gz
+*.dump
+pgdata/
+redisdata/
+
+# ------------------------------------------------------------------------------
+# 3. Backend (Python 3.12 / FastAPI / SQLAlchemy / Alembic)
+# ------------------------------------------------------------------------------
+# Bytecode y compilados
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Pruebas y Cobertura (pytest / coverage)
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Linters y Type Checking (Ruff / mypy / Black)
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# Bases de datos de prueba locales / SQLite
+*.db
+*.db-journal
+*.sqlite3
+backend/test.db
+
+# Logs
+*.log
+
+# ------------------------------------------------------------------------------
+# 4. Frontend (Next.js 14 / Node.js / TypeScript / Zustand / Tailwind)
+# ------------------------------------------------------------------------------
+# Dependencias
+frontend/node_modules/
+node_modules/
+.pnp
+.pnp.js
+
+# Salidas de compilación y caché Next.js
+frontend/.next/
+.next/
+frontend/out/
+out/
+frontend/build/
+build/
+frontend/dist/
+dist/
+.next/cache/
+
+# Testing y Reportes (Jest / Playwright)
+frontend/coverage/
+coverage/
+frontend/test-results/
+test-results/
+frontend/playwright-report/
+playwright-report/
+frontend/blob-report/
+blob-report/
+frontend/playwright/.cache/
+
+# Logs de gestores de paquetes
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Caché de compilación TypeScript
+*.tsbuildinfo
+
+# ------------------------------------------------------------------------------
+# 5. Entornos de Desarrollo (IDEs)
+# ------------------------------------------------------------------------------
+# VS Code (mantiene configs recomendadas del equipo, ignora personalizaciones)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (PyCharm / WebStorm / IntelliJ)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# ------------------------------------------------------------------------------
+# 6. Archivos del Sistema Operativo
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
